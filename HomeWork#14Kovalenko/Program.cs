@@ -84,7 +84,7 @@ namespace HomeWork_14Kovalenko
                                             break;
                                         case ChangeAccount.vipAccount:
                                             {
-                                                list = ChangeBalance(Menu.withdrawCash, list, indexMenu);
+                                                list = ChangeBalance(Menu.withdrawCash, list, indexAccount);
                                             }
                                             break;
                                     }
@@ -135,7 +135,7 @@ namespace HomeWork_14Kovalenko
                     {
                         if (outBlendInput && summ <= list[index].Balance)// б - исключить снятие больше чем есть 
                         {
-                            list[index].Balance = list[0].Balance - summ;
+                            list[index].Balance = list[index].Balance - summ;
                             Console.WriteLine($"Сума {summ} була успішно знята з вашого рахунку.\n");
                         }
                         else if (summ > list[index].Balance) { Console.WriteLine("Нажаль на вашому рахунку бракує коштів\n" +
@@ -146,7 +146,7 @@ namespace HomeWork_14Kovalenko
                     break;
                     case Menu.makeAdeposit:
                         {
-                            list[index].Balance = list[0].Balance + summ;
+                            list[index].Balance = list[index].Balance + summ;
                             Console.WriteLine($"Сума {summ} була успішно додана на ваш рахунок\n");
                         }
                         break;
